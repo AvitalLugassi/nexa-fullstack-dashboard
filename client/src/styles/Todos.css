@@ -1,0 +1,285 @@
+/* Todos Page - Modern Table Layout */
+.todos-container {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  padding: 24px;
+  background: #f1f5f9;
+}
+
+.todos-header {
+  margin-bottom: 24px;
+}
+
+.todos-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1E3A8A;
+  margin: 0 0 8px 0;
+}
+
+.todos-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Toolbar */
+.todos-toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Compact Toolbar for Photos and Comments */
+.todos-toolbar.compact {
+  gap: 6px;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  min-height: 48px;
+}
+
+.todos-search-input {
+  flex: 1;
+  min-width: 200px;
+  height: 44px;
+  padding: 10px 14px 10px 56px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%2364748B" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>') no-repeat 14px center;
+}
+
+/* Compact Input for Photos and Comments */
+.todos-toolbar.compact .todos-search-input {
+  min-width: 100px;
+  height: 28px;
+  padding: 4px 8px 4px 28px;
+  border-radius: 4px;
+  font-size: 11px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="%2364748B" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>') no-repeat 8px center;
+}
+
+.todos-search-input::placeholder {
+  padding-left: 10px;
+}
+
+.todos-search-input:focus {
+  outline: none;
+  border-color: #1E3A8A;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.todos-select {
+  height: 40px;
+  padding: 0 32px 0 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Compact Select for Photos and Comments */
+.todos-toolbar.compact .todos-select {
+  height: 28px;
+  padding: 0 16px 0 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.todos-select:focus {
+  outline: none;
+  border-color: #1E3A8A;
+}
+
+.todos-btn {
+  height: 40px;
+  padding: 0 20px;
+  background: #1E3A8A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Compact Button for Photos and Comments */
+.todos-toolbar.compact .todos-btn {
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.todos-btn:hover {
+  background: #2563EB;
+  transform: translateY(-1px);
+}
+
+.todos-btn-outline {
+  background: white;
+  color: #1E3A8A;
+  border: 1px solid #1E3A8A;
+}
+
+.todos-btn-outline:hover {
+  background: #EFF6FF;
+  transform: translateY(-1px);
+}
+
+/* Table Layout */
+.todos-table {
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.todos-table-header {
+  display: grid;
+  grid-template-columns: 50px 60px 1fr 120px 100px;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.todos-table-row {
+  display: grid;
+  grid-template-columns: 50px 60px 1fr 120px 100px;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #F1F5F9;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.todos-table-row:hover {
+  background: #F8FAFC;
+}
+
+.todos-table-row:last-child {
+  border-bottom: none;
+}
+
+.todos-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #1E3A8A;
+}
+
+.todos-id {
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.todos-title-text {
+  font-size: 14px;
+  color: #0F172A;
+  font-weight: 500;
+}
+
+.todos-title-text.completed {
+  color: #94A3B8;
+  text-decoration: line-through;
+}
+
+.todos-status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.todos-status.completed {
+  background: #DCFCE7;
+  color: #166534;
+}
+
+.todos-status.pending {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.todos-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todos-action-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #E2E8F0;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.todos-action-btn:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+}
+
+/* Empty State */
+.todos-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #64748B;
+}
+
+.todos-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.todos-empty-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0F172A;
+  margin-bottom: 8px;
+}
+
+.todos-empty-subtext {
+  font-size: 14px;
+  color: #64748B;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .todos-table-header,
+  .todos-table-row {
+    grid-template-columns: 40px 1fr 80px;
+  }
+  
+  .todos-id,
+  .todos-actions {
+    display: none;
+  }
+}

@@ -1,0 +1,201 @@
+.terms-wrapper {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    background: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.terms-container {
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.terms-header {
+    background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.terms-logo {
+    width: 150px;
+    height: auto;
+}
+
+.terms-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.terms-subtitle {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.terms-content {
+    padding: 20px;
+}
+
+.terms-section {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.terms-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.terms-section h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E3A8A;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terms-section h2::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3csvg%20width%3d%2218%22%20height%3d%2218%22%20viewBox%3d%220%200%2018%2018%22%20fill%3d%22none%22%20xmlns%3d%22http%3a//www.w3.org/2000/svg%22%3e%3crect%20x%3d%223%22%20y%3d%221%22%20width%3d%2212%22%20height%3d%2216%22%20rx%3d%222%22%20stroke%3d%22%234f46e5%22%20strokeWidth%3d%221.5%22/%3e%3cline%20x1%3d%226%22%20y1%3d%225.5%22%20x2%3d%2212%22%20y2%3d%225.5%22%20stroke%3d%22%234f46e5%22%20strokeWidth%3d%221.2%22%20strokeLinecap%3d%22round%22/%3e%3cline%20x1%3d%226%22%20y1%3d%228.5%22%20x2%3d%2212%22%20y2%3d%228.5%22%20stroke%3d%22%234f46e5%22%20strokeWidth%3d%221.2%22%20strokeLinecap%3d%22round%22/%3e%3cline%20x1%3d%226%22%20y1%3d%2211.5%22%20x2%3d%2210%22%20y2%3d%2211.5%22%20stroke%3d%22%234f46e5%22%20strokeWidth%3d%221.2%22%20strokeLinecap%3d%22round%22/%3e%3c/svg%3e");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.terms-section p {
+    color: #374151;
+    line-height: 1.5;
+    margin: 0 0 8px 0;
+    font-size: 14px;
+}
+
+.terms-section ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.terms-section li {
+    color: #374151;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.terms-footer {
+    padding: 15px 20px;
+    background: #f1f5f9;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+}
+
+.terms-footer p {
+    margin: 2px 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.code-section {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+.code-section h2 {
+    color: #60a5fa;
+}
+
+.code-section h2::before {
+    content: '💻';
+}
+
+.code-section p {
+    color: #cbd5e1;
+}
+
+.code-snippet {
+    margin-bottom: 20px;
+    background: #0f172a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.code-snippet h3 {
+    background: #1e293b;
+    margin: 0;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #60a5fa;
+}
+
+.code-snippet pre {
+    margin: 0;
+    padding: 16px;
+    overflow-x: auto;
+}
+
+.code-snippet code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #e2e8f0;
+}
+
+.terms-footer {
+    background: #f1f5f9;
+    padding: 30px 40px;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+}
+
+.terms-footer p {
+    margin: 4px 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .terms-wrapper {
+        padding: 16px;
+    }
+
+    .terms-header {
+        padding: 32px 20px;
+    }
+
+    .terms-title {
+        font-size: 28px;
+    }
+
+    .terms-content {
+        padding: 20px;
+    }
+
+    .terms-section {
+        padding: 16px;
+    }
+}

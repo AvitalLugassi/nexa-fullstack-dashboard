@@ -1,0 +1,230 @@
+/* ===========================
+   Info Page — Premium Redesign
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ── Root & Page ── */
+.info-page {
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  background: #f0f4ff;
+  position: relative;
+  overflow-x: hidden;
+  padding: 48px 24px 64px;
+  box-sizing: border-box;
+}
+
+/* Background blobs */
+.info-bg-blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+  animation: blobDrift 18s ease-in-out infinite alternate;
+}
+.blob-1 {
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, #c7d7ff 0%, #a5bcff 60%, transparent 100%);
+  top: -120px; left: -140px;
+  animation-duration: 20s;
+}
+.blob-2 {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, #d4edff 0%, #b8d9f8 60%, transparent 100%);
+  bottom: 80px; right: -100px;
+  animation-duration: 16s; animation-delay: -5s;
+}
+.blob-3 {
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, #e0f0ff 0%, #cce4fc 60%, transparent 100%);
+  top: 55%; left: 38%;
+  animation-duration: 22s; animation-delay: -9s;
+}
+@keyframes blobDrift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, 24px) scale(1.06); }
+}
+
+/* ── Wrapper ── */
+.info-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  animation: pageIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.985); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── Hero Card ── */
+.info-hero {
+  position: relative;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 44px 36px 36px;
+  box-shadow: 0 2px 0 0 rgba(30,58,138,0.06), 0 8px 32px rgba(30,58,138,0.10), 0 32px 64px rgba(30,58,138,0.07);
+  border: 1.5px solid rgba(30,58,138,0.10);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  animation: cardIn 0.6s cubic-bezier(0.22,1,0.36,1) 0.05s both;
+}
+.info-hero-glow {
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.info-avatar-ring { position: relative; flex-shrink: 0; }
+.info-avatar {
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.20), 0 8px 28px rgba(30,58,138,0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 5px rgba(37,99,235,0.28), 0 12px 36px rgba(30,58,138,0.28);
+}
+.info-online-dot {
+  position: absolute; bottom: 7px; right: 7px;
+  width: 18px; height: 18px;
+  background: #22c55e;
+  border: 3px solid white;
+  border-radius: 50%;
+  animation: onlinePulse 2.4s ease-in-out infinite;
+}
+@keyframes onlinePulse {
+  0%,100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.25); }
+  50%      { box-shadow: 0 0 0 6px rgba(34,197,94,0.10); }
+}
+
+.info-hero-text { flex: 1; }
+.info-name {
+  font-family: 'Sora', sans-serif;
+  font-size: 30px; font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 4px;
+  letter-spacing: -0.5px; line-height: 1.15;
+}
+.info-handle { font-size: 15px; color: #64748b; font-weight: 500; margin: 0 0 16px; }
+.info-hero-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #eff6ff; color: #1d4ed8;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.4px;
+  padding: 5px 13px; border-radius: 999px;
+  border: 1.5px solid #bfdbfe; text-transform: uppercase;
+}
+.badge-dot { width: 7px; height: 7px; background: #3b82f6; border-radius: 50%; }
+
+/* ── Contact Strip ── */
+.info-strip {
+  background: white;
+  border-radius: 20px;
+  border: 1.5px solid rgba(30,58,138,0.10);
+  box-shadow: 0 4px 20px rgba(30,58,138,0.07);
+  padding: 20px 28px;
+  display: flex; align-items: center;
+  margin-bottom: 20px;
+  animation: cardIn 0.6s cubic-bezier(0.22,1,0.36,1) 0.12s both;
+}
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; padding: 4px 8px; }
+.strip-icon {
+  width: 40px; height: 40px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; flex-shrink: 0;
+  color: #1d4ed8; border: 1.5px solid #bfdbfe;
+}
+.strip-label { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px; }
+.strip-value { font-size: 14px; font-weight: 600; color: #1e293b; }
+.strip-divider { width: 1px; height: 44px; background: #e2e8f0; flex-shrink: 0; margin: 0 8px; }
+
+/* ── Two-Column Cards ── */
+.info-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.info-block {
+  background: white;
+  border-radius: 22px;
+  border: 1.5px solid rgba(30,58,138,0.10);
+  box-shadow: 0 4px 20px rgba(30,58,138,0.07);
+  padding: 28px 26px;
+  position: relative; overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info-block:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(30,58,138,0.13); }
+.address-block { animation: cardIn 0.6s cubic-bezier(0.22,1,0.36,1) 0.20s both; }
+.company-block { animation: cardIn 0.6s cubic-bezier(0.22,1,0.36,1) 0.28s both; }
+
+.block-deco {
+  position: absolute; bottom: -30px; right: -30px;
+  width: 100px; height: 100px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.comp-deco {
+  background: radial-gradient(circle, rgba(16,185,129,0.10) 0%, transparent 70%);
+  width: 120px; height: 120px; bottom: -35px; right: -35px;
+}
+
+.block-header { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+.block-icon-wrap {
+  width: 40px; height: 40px; border-radius: 11px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.addr-color  { background: linear-gradient(135deg,#fef9ee,#fde68a); color: #b45309; border: 1.5px solid #fde68a; }
+.comp-color  { background: linear-gradient(135deg,#ecfdf5,#a7f3d0); color: #047857; border: 1.5px solid #a7f3d0; }
+.block-title { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 700; color: #0f172a; margin: 0; letter-spacing: -0.2px; }
+
+.block-fields { display: flex; flex-direction: column; }
+.field-row { display: flex; flex-direction: column; padding: 12px 0; border-bottom: 1px solid #f1f5f9; gap: 3px; }
+.field-row:last-child { border-bottom: none; padding-bottom: 0; }
+.field-label { font-size: 10.5px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.9px; }
+.field-value { font-size: 14px; font-weight: 600; color: #1e293b; line-height: 1.4; }
+
+.field-value.zip-chip {
+  display: inline-block;
+  background: #f1f5f9; border-radius: 6px; padding: 2px 10px;
+  font-size: 13px; font-family: 'Courier New', monospace;
+  font-weight: 700; color: #475569; border: 1px solid #e2e8f0; letter-spacing: 0.5px;
+}
+.field-value.company-name { font-family: 'Sora', sans-serif; font-size: 14.5px; font-weight: 700; color: #0f172a; }
+.field-value.catchphrase { color: #4338ca; font-style: italic; font-size: 13.5px; font-weight: 500; }
+
+/* ── Footer Note ── */
+.info-footer-note {
+  text-align: center; font-size: 12px; color: #94a3b8;
+  font-weight: 500; letter-spacing: 0.3px; margin-top: 28px;
+  animation: cardIn 0.6s cubic-bezier(0.22,1,0.36,1) 0.38s both;
+}
+
+/* ── Responsive ── */
+@media (max-width: 660px) {
+  .info-page { padding: 28px 16px 48px; }
+  .info-hero { flex-direction: column; text-align: center; padding: 36px 24px 28px; gap: 20px; }
+  .info-hero-badge { margin: 0 auto; }
+  .info-strip { flex-direction: column; gap: 16px; padding: 20px; align-items: flex-start; }
+  .strip-divider { width: 100%; height: 1px; margin: 0; }
+  .info-columns { grid-template-columns: 1fr; }
+  .info-name { font-size: 24px; }
+}
+
+@media print {
+  .info-bg-blob { display: none; }
+  .info-block, .info-strip, .info-hero { box-shadow: none; border: 1px solid #e2e8f0; }
+}
