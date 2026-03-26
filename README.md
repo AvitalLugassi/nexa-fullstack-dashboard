@@ -49,7 +49,7 @@ password: (use the value from the user’s `website` field)
 
 ### Albums & Photos
 
-![Albums](client/assets/screenshots
+![Albums](assets/screenshots
 /Albums.png)
 
 ---
