@@ -33,7 +33,7 @@ password: (use the value from the user’s `website` field)
 
 ### Authentication
 
-![Login](client/assets/screenshots/login.png)
+![Login](client/assets/screenshots/Login.png)
 
 ### Dashboard
 
