@@ -6,7 +6,7 @@ The client is responsible for user interaction, routing, state management, and c
 
 ---
 
-## 🚀 Live Application
+##  Live Application
 
 https://nexa-fullstack-dashboard.vercel.app/
 
@@ -20,7 +20,7 @@ https://nexa-fullstack-dashboard.vercel.app/
 
 ---
 
-## 🎯 Responsibilities
+##  Responsibilities
 
 - Authentication (Login / Register)
 - Protected routes
@@ -51,7 +51,7 @@ src/
 
 ---
 
-## 🧩 State Management
+##  State Management
 
 - Context API for global state
 - Custom hooks for reusable logic
@@ -61,7 +61,7 @@ This approach keeps the app scalable and avoids unnecessary complexity.
 
 ---
 
-## 🔄 Reusable Logic
+##  Reusable Logic
 
 Reusable logic is abstracted into custom hooks:
 
@@ -88,7 +88,7 @@ Reusable logic is abstracted into custom hooks:
 
 ---
 
-## 🛠️ Technologies
+##  Technologies
 
 - React
 - React Router DOM
