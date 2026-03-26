@@ -5,13 +5,13 @@ This folder contains the mock backend built using JSON Server.
 It simulates a REST API used by the Nexa frontend application.
 
 ---
-## 🚀 Live API
+##  Live API
 
 https://nexa-fullstack-dashboard.onrender.com
 
 ---
 
-## 📦 Resources
+##  Resources
 
 The database includes relational entities such as:
 

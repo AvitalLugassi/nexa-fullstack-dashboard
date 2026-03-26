@@ -32,7 +32,7 @@ https://nexa-fullstack-dashboard.vercel.app/
 
 ---
 
-## 🧠 Architecture
+##  Architecture
 
 The frontend follows a modular, component-based architecture.
 
@@ -70,7 +70,7 @@ Reusable logic is abstracted into custom hooks:
 
 ---
 
-## 🛣️ Routing
+##  Routing
 
 - Route-based page structure  
 - Nested routing for relational data:
